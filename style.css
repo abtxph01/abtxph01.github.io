@@ -7,7 +7,7 @@
     --text-main: #f0f6fc;
     --text-muted: #8b949e;
     --accent: #58a6ff;
-    --accent-glow: rgba(88, 166, 255, 0.15);
+    --accent-glow: rgba(88, 166, 255, 0.12);
     --accent-purple: #bc8cff;
     --radius: 12px;
 }
@@ -24,23 +24,23 @@ html {
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: var(--bg-main);
     color: var(--text-main);
     line-height: 1.6;
-    padding-top: 80px;
 }
 
-/* Navbar */
+/* Fixed Navigation Header */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 8%;
+    padding: 0 10%;
     background-color: rgba(13, 17, 23, 0.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
@@ -67,6 +67,7 @@ body {
     color: var(--text-muted);
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.95rem;
     transition: color 0.2s ease;
 }
 
@@ -74,18 +75,17 @@ body {
     color: var(--accent);
 }
 
-/* Hero Section */
-.hero {
-    min-height: calc(85vh - 80px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
+/* Main Layout Wrapper */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 20px 40px 20px;
 }
 
-.hero-content {
-    max-width: 700px;
+/* Hero Section */
+.hero {
+    padding: 80px 0 60px 0;
+    text-align: center;
 }
 
 .badge {
@@ -116,7 +116,8 @@ body {
 .hero p {
     font-size: 1.2rem;
     color: var(--text-muted);
-    margin-bottom: 2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
 }
 
 .hero-buttons {
@@ -162,23 +163,20 @@ body {
 
 /* Sections */
 .section {
-    padding: 5rem 10%;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 60px 0;
 }
 
 .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 2.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.8rem;
     display: flex;
     align-items: center;
     gap: 0.75rem;
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.75rem;
-    color: var(--text-main);
 }
 
-/* Cards & Grids */
+/* Grids & Cards */
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -187,7 +185,7 @@ body {
 
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
 }
 
@@ -205,7 +203,7 @@ body {
 }
 
 .card h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin-bottom: 0.75rem;
 }
 
@@ -215,8 +213,8 @@ body {
 }
 
 .card-icon {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     background-color: var(--accent-glow);
     color: var(--accent);
     border-radius: 10px;
@@ -242,11 +240,11 @@ body {
     border: 1px solid var(--border);
 }
 
-/* Skills */
+/* Skills Tags */
 .skills-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .skill-tag {
@@ -265,43 +263,44 @@ body {
     background-color: var(--accent-glow);
 }
 
-/* Contact */
+/* Contact & Footer */
 .contact-card {
     text-align: center;
     padding: 3rem 2rem;
 }
 
 .contact-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .contact-links {
     margin-top: 1.5rem;
 }
 
-/* Footer */
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 0;
     color: var(--text-muted);
     font-size: 0.85rem;
     border-top: 1px solid var(--border);
     margin-top: 4rem;
 }
 
-/* Responsive */
+/* Responsive Mobile Layout */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    .navbar ul {
         gap: 1rem;
-        padding: 1rem;
     }
 
     .hero h1 {
         font-size: 2.2rem;
     }
 
-    .section {
-        padding: 3rem 5%;
+    .hero-buttons {
+        flex-direction: column;
     }
 }
