@@ -3,14 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willkommen</title>
-    <!-- Verknüpfung zur externen CSS-Datei -->
+    <title>Philipp | Portfolio & Projekte</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons für moderne Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Willkommen auf meiner Website!</h1>
-        <p>Hier entsteht mein neues Projekt.</p>
-    </div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">Philipp<span>.dev</span></div>
+        <nav>
+            <ul>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#projects">Projekte</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Willkommen auf meiner Website</span>
+            <h1>Moin, ich bin <span class="highlight">Philipp</span></h1>
+            <p>Willkommen auf meinem persönlichen Space! Hier teile ich meine aktuellen Projekte, Interessen und Vorhaben.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">Projekte ansehen</a>
+                <a href="#contact" class="btn secondary">Kontakt aufnehmen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über mich -->
+    <section id="about" class="section">
+        <h2 class="section-title"><i data-lucide="user"></i> Über mich</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Wer ich bin</h3>
+                <p>Ich begeistere mich für Technik, Tüfteln, Hardware-Systeme und das Erstellen von eigenen Projekten. Ich probiere gerne neue Technologien aus und erstelle funktionale sowie optisch ansprechende Lösungen.</p>
+            </div>
+            <div class="card">
+                <h3>Was mich antreibt</h3>
+                <p>Egal ob Hardware, Software oder kreative Maker-Projekte – das ständige Lernen und Ausprobieren steht für mich an erster Stelle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projekte -->
+    <section id="projects" class="section">
+        <h2 class="section-title"><i data-lucide="folder-git-2"></i> Projekte</h2>
+        <div class="grid-3">
+            <div class="card project-card">
+                <div class="card-icon"><i data-lucide="globe"></i></div>
+                <h3>GitHub Portfolio</h3>
+                <p>Meine persönliche Website gehostet auf GitHub Pages mit individuellem HTML, CSS & JavaScript.</p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>GitHub</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="card-icon"><i data-lucide="cpu"></i></div>
+                <h3>Tech & Hardware</h3>
+                <p>Eigenbau-, Setup- und Automatisierungsprojekte rund um PC-Hardware, Systemoptimierung und Hardware-Labor.</p>
+                <div class="tags">
+                    <span>Hardware</span>
+                    <span>Setup</span>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="card-icon"><i data-lucide="code"></i></div>
+                <h3>Zukünftige Ideen</h3>
+                <p>Hier werden demnächst weitere spannende Coding- und Maker-Projekte veröffentlicht.</p>
+                <div class="tags">
+                    <span>Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills / Interessen -->
+    <section id="skills" class="section">
+        <h2 class="section-title"><i data-lucide="zap"></i> Skills & Fokus</h2>
+        <div class="skills-wrapper">
+            <div class="skill-tag">Web Development</div>
+            <div class="skill-tag">HTML5 / CSS3</div>
+            <div class="skill-tag">Git & GitHub</div>
+            <div class="skill-tag">Hardware Diagnostics</div>
+            <div class="skill-tag">System Configuration</div>
+            <div class="skill-tag">Problem Solving</div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact" class="section">
+        <h2 class="section-title"><i data-lucide="mail"></i> Kontakt</h2>
+        <div class="card contact-card">
+            <h3>Lass uns in Kontakt treten!</h3>
+            <p>Du findest mich auf GitHub oder kannst mir direkt eine Nachricht schreiben.</p>
+            <div class="contact-links">
+                <a href="https://github.com/abtxph01" target="_blank" class="btn primary">
+                    <i data-lucide="github"></i> Mein GitHub Profil
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Philipp. Gehostet auf GitHub Pages.</p>
+    </footer>
+
+    <!-- Icons aktivieren -->
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
